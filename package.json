@@ -1,0 +1,25 @@
+{
+  "name": "arturito_2.0",
+  "version": "2.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src",
+    "dev": "npx nodemon src",
+    "build": "babel src/public/modules/cajaRecordatorios.js -d src/public/modules/output"
+  },
+  "keywords": [],
+  "author": "Erick Riaño Hoyos",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "nodemon": "^2.0.6"
+  },
+  "description": ""
+}

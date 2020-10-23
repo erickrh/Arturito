@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <%- include ('partials/head.html') %>
+</head>
+<body>
+    <%- include ('partials/header.html') %>
+
+    <section class="mt-4">
+        <div class="container">
+            <div class="row">
+                <div id="left" class="col-md-5">
+                    <form id="formTasks" class="card w-75 text-white bg-secondary">
+                        <h5 class="text-center justify-content-center align-center mt-3">Tasks</h5>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <textarea name="areaTexto" id="areaTexto" cols="30" rows="9" class="form-control" placeholder="What are you going to remember?"></textarea>
+                            </div>
+                            <button type="submit" id="botonEnviar" class="botonEnviar form-control">Save</button>
+                        </div>
+                    </form>
+                </div>
+                <div id="recordatorios" class="col-md-7"></div>
+            </div>
+        </div>
+    </section>
+
+    <%- include ('partials/footer.html') %>
+    <%- include ('partials/scripts.html') %>
+
+</body>
+</html>

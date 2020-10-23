@@ -1,0 +1,37 @@
+#bannerContainer {
+    background-color: black;
+    box-shadow: 2px 2px 5px #000;
+}
+
+#banner {
+    margin: auto;
+    display: block;
+    width: 38%;
+}
+
+.botonEnviar:hover {
+    opacity: 0.8;
+}
+
+li {
+    margin-top: 15px;
+}
+
+footer {
+    text-align: center;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 414px) {
+    #banner {
+        margin: auto;
+        display: block;
+        width: 85%;
+    }
+
+    #formTasks {
+        margin: auto;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
