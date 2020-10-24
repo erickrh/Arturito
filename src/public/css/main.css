@@ -9,6 +9,10 @@
     width: 38%;
 }
 
+#formTasks {
+    width: 75%;
+}
+
 .botonEnviar:hover {
     opacity: 0.8;
 }
@@ -33,5 +37,6 @@ footer {
         margin: auto;
         display: block;
         margin-bottom: 20px;
+        width: 90%;
     }
 }
