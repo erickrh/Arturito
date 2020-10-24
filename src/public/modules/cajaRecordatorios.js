@@ -10,11 +10,11 @@ function saveTask(e) {
 
   if (localStorage.getItem('tasksList') === null) {
     let tasksList = [];
-    tasksList.push(task);
+    tasksList.unshift(task);
     localStorage.setItem('tasksList', JSON.stringify(tasksList));
   } else {
     let tasksList = JSON.parse(localStorage.getItem('tasksList'));
-    tasksList.push(task);
+    tasksList.unshift(task);
     localStorage.setItem('tasksList', JSON.stringify(tasksList));
   }
   e.preventDefault();
@@ -40,7 +40,7 @@ function getTasks() {
       <div class="card mb-3 animate__animated animate__headShake">
         <div class="card-body">
           <p>${description}</p>
-          <div class="btn btn-danger btn-sm" onclick="deleteTasks('${description}')">Delete</div>
+          <div class="btn btn-danger btn-sm" onclick="deleteTasks('${i}')">Delete</div>
         </div>
       </div>
       `; // End Template String
@@ -48,14 +48,10 @@ function getTasks() {
   }
 }
 
-function deleteTasks(description) {
+function deleteTasks(i) {
   let tasksList = JSON.parse(localStorage.getItem('tasksList'));
+  tasksList.splice(i, 1);
 
-  for (let i = 0; i < tasksList.length; i++) {
-    if (tasksList[i].description == description) {
-      tasksList.splice(i, 1);
-    }
-  }
   // Save Tasks
   localStorage.setItem('tasksList', JSON.stringify(tasksList));
   
