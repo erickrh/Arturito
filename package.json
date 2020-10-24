@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node src",
     "dev": "npx nodemon src",
-    "build": "babel src/public/modules/cajaRecordatorios.js -d src/public/modules/output --watch"
+    "build": "babel src/public/modules/cajaRecordatorios.js -d src/public/modules/output"
   },
   "keywords": [],
   "author": "Erick Riaño Hoyos",
